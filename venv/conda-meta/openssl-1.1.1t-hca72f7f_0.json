@@ -136,7 +136,6 @@
   ],
   "fn": "openssl-1.1.1t-hca72f7f_0.conda",
   "legacy_bz2_md5": "ca5937e682d945681eea05bc74c4c83d",
-  "legacy_bz2_size": 3680201,
   "license": "OpenSSL",
   "license_family": "Apache",
   "link": {
@@ -1029,7 +1028,7 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "None",
+  "requested_spec": "openssl",
   "sha256": "751b677334095dc1dea43dfb46baf1108aa39ca9fb5880dbecd648b196c00f29",
   "size": 3508693,
   "subdir": "osx-64",

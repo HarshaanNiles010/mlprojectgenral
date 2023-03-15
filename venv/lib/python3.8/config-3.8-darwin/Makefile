@@ -28,17 +28,17 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 
 # === Variables set by configure
 VERSION=	3.8
-srcdir=		/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work
-VPATH=		/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work
-abs_srcdir=	/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work
-abs_builddir=	/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work/build-static
+srcdir=		/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work
+VPATH=		/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work
+abs_srcdir=	/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work
+abs_builddir=	/private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work/build-static
 
 
 CC=		x86_64-apple-darwin13.4.0-clang
 CXX=		x86_64-apple-darwin13.4.0-clang++
 MAINCC=		$(CC)
 LINKCC=		$(PURIFY) $(MAINCC)
-AR=		/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/_build_env/bin/llvm-ar
+AR=		/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/_build_env/bin/x86_64-apple-darwin13.4.0-llvm-ar
 READELF=	:
 SOABI=		cpython-38-darwin
 LDVERSION=	$(VERSION)$(ABIFLAGS)
@@ -48,7 +48,7 @@ GITTAG=
 GITBRANCH=	
 PGO_PROF_GEN_FLAG=-fprofile-instr-generate
 PGO_PROF_USE_FLAG=-fprofile-instr-use=code.profclangd
-LLVM_PROF_MERGER=/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/_build_env/bin/llvm-profdata merge -output=code.profclangd *.profclangr
+LLVM_PROF_MERGER=/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/_build_env/bin/llvm-profdata merge -output=code.profclangd *.profclangr
 LLVM_PROF_FILE=LLVM_PROFILE_FILE="code-%p.profclangr"
 LLVM_PROF_ERR=no
 DTRACE=         
@@ -73,7 +73,7 @@ INSTALL_DATA=	${INSTALL} -m 644
 # rather than figuring out exactly which, we always give them executable mode.
 INSTALL_SHARED= ${INSTALL} -m 755
 
-MKDIR_P=	/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work/install-sh -c -d
+MKDIR_P=	/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work/install-sh -c -d
 
 MAKESETUP=      $(srcdir)/Modules/makesetup
 
@@ -81,7 +81,7 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -fwrapv -O2 -Wall
 BASECFLAGS=	 -Wno-unused-result -Wsign-compare -Wunreachable-code
 BASECPPFLAGS=	-IObjects -IInclude -IPython
-CONFIGURE_CFLAGS=	-isysroot /opt/MacOSX10.10.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -fdebug-prefix-map=/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work=/usr/local/src/conda/python-3.8.0 -fdebug-prefix-map=/Users/harshaanbabra/Desktop/Code/mlProject/venv=/usr/local/src/conda-prefix 
+CONFIGURE_CFLAGS=	-isysroot /opt/MacOSX10.10.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/harshaanbabra/Desktop/Code/mlProject/venv/include -fdebug-prefix-map=/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work=/usr/local/src/conda/python-3.8.16 -fdebug-prefix-map=/Users/harshaanbabra/Desktop/Code/mlProject/venv=/usr/local/src/conda-prefix 
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
@@ -90,7 +90,7 @@ CONFIGURE_CFLAGS_NODIST=  -Wl,-export_dynamic -g -std=c99 -Wextra -Wno-unused-re
 # Use it when a linker flag should _not_ be part of the distutils LDFLAGS
 # once Python is installed (bpo-35257)
 CONFIGURE_LDFLAGS_NODIST=  -Wl,-export_dynamic -g
-CONFIGURE_CPPFLAGS=	-isysroot /opt/MacOSX10.10.sdk -D_FORTIFY_SOURCE=2 -mmacosx-version-min=10.9 -I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include -I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include
+CONFIGURE_CPPFLAGS=	-isysroot /opt/MacOSX10.10.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/harshaanbabra/Desktop/Code/mlProject/venv/include -mmacosx-version-min=10.9 -I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include
 CONFIGURE_LDFLAGS=	-isysroot /opt/MacOSX10.10.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib -L/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
@@ -183,6 +183,9 @@ STRIPFLAG=-s
 # Flags to lipo to produce a 32-bit-only universal executable
 LIPO_32BIT_FLAGS=
 
+# Flags to lipo to produce an intel-64-only universal executable
+LIPO_INTEL64_FLAGS=
+
 # Options to enable prebinding (for fast startup prior to Mac OS X 10.3)
 OTHER_LIBTOOL_OPT=
 
@@ -204,7 +207,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/Users/harshaanbabra/Desktop/Code/mlProject/venv' '--build=x86_64-apple-darwin13.4.0' '--host=x86_64-apple-darwin13.4.0' '--enable-ipv6' '--with-ensurepip=no' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include' '--with-tcltk-libs=-L/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib -ltcl8.6 -ltk8.6' '--enable-optimizations' '--with-lto' '-oldincludedir=/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/_build_env/x86_64-apple-darwin13.4.0/sysroot/usr/include' '--disable-shared' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=x86_64-apple-darwin13.4.0' 'CC=x86_64-apple-darwin13.4.0-clang' 'CFLAGS=-isysroot /opt/MacOSX10.10.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -fdebug-prefix-map=/opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work=/usr/local/src/conda/python-3.8.0 -fdebug-prefix-map=/Users/harshaanbabra/Desktop/Code/mlProject/venv=/usr/local/src/conda-prefix ' 'LDFLAGS=-isysroot /opt/MacOSX10.10.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib -L/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib' 'CPPFLAGS=-isysroot /opt/MacOSX10.10.sdk -D_FORTIFY_SOURCE=2 -mmacosx-version-min=10.9 -I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include -I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include' 'PKG_CONFIG_PATH=/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib/pkgconfig'
+CONFIG_ARGS=	 '--prefix=/Users/harshaanbabra/Desktop/Code/mlProject/venv' '--build=x86_64-apple-darwin13.4.0' '--host=x86_64-apple-darwin13.4.0' '--enable-ipv6' '--with-ensurepip=no' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-openssl=/Users/harshaanbabra/Desktop/Code/mlProject/venv' '--with-tcltk-includes=-I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include' '--with-tcltk-libs=-L/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib -ltcl8.6 -ltk8.6' '--with-lto' '--enable-optimizations' '-oldincludedir=/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/_build_env/x86_64-apple-darwin13.4.0/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=x86_64-apple-darwin13.4.0' 'MACHDEP=darwin' 'CC=x86_64-apple-darwin13.4.0-clang' 'CFLAGS=-isysroot /opt/MacOSX10.10.sdk -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/harshaanbabra/Desktop/Code/mlProject/venv/include -fdebug-prefix-map=/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work=/usr/local/src/conda/python-3.8.16 -fdebug-prefix-map=/Users/harshaanbabra/Desktop/Code/mlProject/venv=/usr/local/src/conda-prefix ' 'LDFLAGS=-isysroot /opt/MacOSX10.10.sdk -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib -L/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib' 'CPPFLAGS=-isysroot /opt/MacOSX10.10.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/harshaanbabra/Desktop/Code/mlProject/venv/include -mmacosx-version-min=10.9 -I/Users/harshaanbabra/Desktop/Code/mlProject/venv/include' 'PKG_CONFIG_PATH=/Users/harshaanbabra/Desktop/Code/mlProject/venv/lib/pkgconfig'
 
 
 # Subdirectories with code
@@ -248,7 +251,7 @@ PYTHON_FOR_REGEN=python3
 UPDATE_FILE=python3 $(srcdir)/Tools/scripts/update_file.py
 PY_BUILD_ENVIRON=
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
-_PYTHON_HOST_PLATFORM=darwin
+_PYTHON_HOST_PLATFORM=darwin-x86_64
 BUILD_GNU_TYPE=	x86_64-apple-darwin13.4.0
 HOST_GNU_TYPE=	x86_64-apple-darwin13.4.0
 
@@ -279,6 +282,7 @@ SITEPATH=
 DESTPATH=
 MACHDESTLIB=$(BINLIBDEST)
 DESTLIB=$(LIBDEST)
+
 
 
 ##########################################################################
@@ -737,6 +741,15 @@ regen-importlib: Programs/_freeze_importlib
 	    $(srcdir)/Python/importlib_zipimport.h.new
 	$(UPDATE_FILE) $(srcdir)/Python/importlib_zipimport.h $(srcdir)/Python/importlib_zipimport.h.new
 
+regen-abidump: all
+	@$(MKDIR_P) $(srcdir)/Doc/data/
+	abidw "libpython$(LDVERSION).so" --no-architecture --out-file $(srcdir)/Doc/data/python$(LDVERSION).abi.new
+	@$(UPDATE_FILE) $(srcdir)/Doc/data/python$(LDVERSION).abi $(srcdir)/Doc/data/python$(LDVERSION).abi.new
+
+check-abidump: all
+		abidiff "libpython$(LDVERSION).so" $(srcdir)/Doc/data/python$(LDVERSION).abi --drop-private-types \
+		--suppressions $(srcdir)/Doc/data/python$(LDVERSION).abi.ignorefile \
+		--no-architecture --no-added-syms
 
 ############################################################################
 # Regenerate all generated files
@@ -1270,6 +1283,12 @@ altbininstall: $(BUILDPYTHON)
 			-output $(DESTDIR)$(BINDIR)/python$(VERSION)-32$(EXE) \
 			$(DESTDIR)$(BINDIR)/python$(VERSION)$(EXE); \
 	fi
+	if test "x$(LIPO_INTEL64_FLAGS)" != "x" ; then \
+		rm -f $(DESTDIR)$(BINDIR)python$(VERSION)-intel64$(EXE); \
+		lipo $(LIPO_INTEL64_FLAGS) \
+			-output $(DESTDIR)$(BINDIR)/python$(VERSION)-intel64$(EXE) \
+			$(DESTDIR)$(BINDIR)/python$(VERSION)$(EXE); \
+	fi
 
 bininstall: altbininstall
 	if test ! -d $(DESTDIR)$(LIBPC); then \
@@ -1304,6 +1323,10 @@ bininstall: altbininstall
 	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
 		rm -f $(DESTDIR)$(BINDIR)/python3-32$(EXE); \
 		(cd $(DESTDIR)$(BINDIR); $(LN) -s python$(VERSION)-32$(EXE) python3-32$(EXE)) \
+	fi
+	if test "x$(LIPO_INTEL64_FLAGS)" != "x" ; then \
+		rm -f $(DESTDIR)$(BINDIR)/python3-intel64$(EXE); \
+		(cd $(DESTDIR)$(BINDIR); $(LN) -s python$(VERSION)-intel64$(EXE) python3-intel64$(EXE)) \
 	fi
 
 # Install the versioned manual page
@@ -1737,6 +1760,7 @@ tags::
 	ctags -w $(srcdir)/Include/*.h $(srcdir)/Include/cpython/*.h $(srcdir)/Include/internal/*.h
 	for i in $(SRCDIRS); do ctags -f tags -w -a $(srcdir)/$$i/*.[ch]; done
 	ctags -f tags -w -a $(srcdir)/Modules/_ctypes/*.[ch]
+	find $(srcdir)/Lib -type f -name "*.py" -not -name "test_*.py" -not -path "*/test/*" -not -path "*/tests/*" -not -path "*/*_test/*" | ctags -f tags -w -a -L -
 	LC_ALL=C sort -o tags tags
 
 # Create a tags file for GNU Emacs
@@ -1744,6 +1768,8 @@ TAGS::
 	cd $(srcdir); \
 	etags Include/*.h Include/cpython/*.h Include/internal/*.h; \
 	for i in $(SRCDIRS); do etags -a $$i/*.[ch]; done
+	etags -a $(srcdir)/Modules/_ctypes/*.[ch]
+	find $(srcdir)/Lib -type f -name "*.py" -not -name "test_*.py" -not -path "*/test/*" -not -path "*/tests/*" -not -path "*/*_test/*" | etags - -a
 
 # Sanitation targets -- clean leaves libraries, executables and tags
 # files, which clobber removes as well

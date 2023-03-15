@@ -43,7 +43,7 @@ build_time_vars = {'ABIFLAGS': '',
  'CONFIGURE_CFLAGS': '-mcpu=power8 -mtune=power8 -mpower8-fusion '
                      '-mpower8-vector -ftree-vectorize -fPIC '
                      '-fstack-protector-strong -fno-plt -O2 '
-                     '-fdebug-prefix-map=/opt/conda/conda-bld/python_1512347718438/work=/usr/local/src/conda/python-3.8.0 '
+                     '-fdebug-prefix-map=/opt/conda/conda-bld/python_1512347718438/work=/usr/local/src/conda/python-3.8.16 '
                      '-fdebug-prefix-map=/Users/harshaanbabra/Desktop/Code/mlProject/venv=/usr/local/src/conda-prefix '
                      '-pipe    '
                      ' ',
@@ -71,7 +71,7 @@ build_time_vars = {'ABIFLAGS': '',
                 "'CFLAGS=-mcpu=power8 -mtune=power8 -mpower8-fusion "
                 '-mpower8-vector -ftree-vectorize -fPIC '
                 '-fstack-protector-strong -fno-plt -O2 '
-                '-fdebug-prefix-map=/opt/conda/conda-bld/python_1512347718438/work=/usr/local/src/conda/python-3.8.0 '
+                '-fdebug-prefix-map=/opt/conda/conda-bld/python_1512347718438/work=/usr/local/src/conda/python-3.8.16 '
                 '-fdebug-prefix-map=/Users/harshaanbabra/Desktop/Code/mlProject/venv=/usr/local/src/conda-prefix '
                 '-pipe    '
                 " ' 'LDFLAGS=-Wl,-O2 "

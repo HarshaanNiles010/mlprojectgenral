@@ -1,4 +1,4 @@
-/* Generated automatically from /opt/concourse/worker/volumes/live/903ea60a-0489-485f-6f93-162648469061/volume/python_1573076474316/work/Modules/config.c.in by makesetup. */
+/* Generated automatically from /var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90ajaesob0/croot/python-split_1677726881910/work/Modules/config.c.in by makesetup. */
 /* -*- C -*- ***********************************************
 Copyright (c) 2000, BeOpen.com.
 Copyright (c) 1995-2000, Corporation for National Research Initiatives.
@@ -45,6 +45,7 @@ extern PyObject* PyInit_faulthandler(void);
 extern PyObject* PyInit__tracemalloc(void);
 extern PyObject* PyInit__symtable(void);
 extern PyObject* PyInit_xxsubtype(void);
+
 /* -- ADDMODULE MARKER 1 -- */
 
 extern PyObject* PyMarshal_Init(void);
@@ -56,28 +57,29 @@ extern PyObject* PyInit__string(void);
 
 struct _inittab _PyImport_Inittab[] = {
 
-{"posix", PyInit_posix},
-{"errno", PyInit_errno},
-{"pwd", PyInit_pwd},
-{"_sre", PyInit__sre},
-{"_codecs", PyInit__codecs},
-{"_weakref", PyInit__weakref},
-{"_functools", PyInit__functools},
-{"_operator", PyInit__operator},
-{"_collections", PyInit__collections},
-{"_abc", PyInit__abc},
-{"itertools", PyInit_itertools},
-{"atexit", PyInit_atexit},
-{"_signal", PyInit__signal},
-{"_stat", PyInit__stat},
-{"time", PyInit_time},
-{"_thread", PyInit__thread},
-{"_locale", PyInit__locale},
-{"_io", PyInit__io},
-{"faulthandler", PyInit_faulthandler},
-{"_tracemalloc", PyInit__tracemalloc},
-{"_symtable", PyInit__symtable},
-{"xxsubtype", PyInit_xxsubtype},
+    {"posix", PyInit_posix},
+    {"errno", PyInit_errno},
+    {"pwd", PyInit_pwd},
+    {"_sre", PyInit__sre},
+    {"_codecs", PyInit__codecs},
+    {"_weakref", PyInit__weakref},
+    {"_functools", PyInit__functools},
+    {"_operator", PyInit__operator},
+    {"_collections", PyInit__collections},
+    {"_abc", PyInit__abc},
+    {"itertools", PyInit_itertools},
+    {"atexit", PyInit_atexit},
+    {"_signal", PyInit__signal},
+    {"_stat", PyInit__stat},
+    {"time", PyInit_time},
+    {"_thread", PyInit__thread},
+    {"_locale", PyInit__locale},
+    {"_io", PyInit__io},
+    {"faulthandler", PyInit_faulthandler},
+    {"_tracemalloc", PyInit__tracemalloc},
+    {"_symtable", PyInit__symtable},
+    {"xxsubtype", PyInit_xxsubtype},
+
 /* -- ADDMODULE MARKER 2 -- */
 
     /* This module lives in marshal.c */

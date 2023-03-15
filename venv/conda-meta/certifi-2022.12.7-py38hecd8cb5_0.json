@@ -28,7 +28,6 @@
   ],
   "fn": "certifi-2022.12.7-py38hecd8cb5_0.conda",
   "legacy_bz2_md5": "cc0c5daddf38547cfd85a9222326749a",
-  "legacy_bz2_size": 156252,
   "license": "MPL-2.0",
   "license_family": "Other",
   "link": {
@@ -155,7 +154,7 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "None",
+  "requested_spec": "certifi",
   "sha256": "a426798274debbd6918da8f950fa6a3de27dcd6c9df1f57af4a9dffe45fbbb63",
   "size": 154777,
   "subdir": "osx-64",
