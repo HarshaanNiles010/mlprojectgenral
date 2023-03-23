@@ -44,7 +44,7 @@ class ModelTrainer():
                 "CatBoosting Classifier":CatBoostRegressor(verbose=False),
                 "AdaBoost Classifier":AdaBoostRegressor()
             }
-            """ params={
+            params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                     # 'splitter':['best','random'],
@@ -64,23 +64,24 @@ class ModelTrainer():
                     'n_estimators': [8,16,32,64,128,256]
                 },
                 "Linear Regression":{},
-                "XGBRegressor":{
+                "K-Neighbors Classifier":{},
+                "XGBClassifier":{
                     'learning_rate':[.1,.01,.05,.001],
                     'n_estimators': [8,16,32,64,128,256]
                 },
-                "CatBoosting Regressor":{
+                "CatBoosting Classifier":{
                     'depth': [6,8,10],
                     'learning_rate': [0.01, 0.05, 0.1],
                     'iterations': [30, 50, 100]
                 },
-                "AdaBoost Regressor":{
+                "AdaBoost Classifier":{
                     'learning_rate':[.1,.01,0.5,.001],
                     # 'loss':['linear','square','exponential'],
                     'n_estimators': [8,16,32,64,128,256]
                 }
                 
-            } """
-            model_report:dict = evaluate_models(X_train=X_train,y_train=Y_train,X_test=X_test,y_test=Y_test,models=models)
+            } 
+            model_report:dict = evaluate_models(X_train=X_train,y_train=Y_train,X_test=X_test,y_test=Y_test,models=models,param=params)
             best_model_score = max(sorted(model_report.values()))
             best_model_name = list(model_report.keys())[
                 list(model_report.values()).index(best_model_score)
